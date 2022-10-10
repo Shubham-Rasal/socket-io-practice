@@ -5,6 +5,8 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server);
 
+const PORT = process.env.PORT || 5000;
+
 app.get('/', (req, res) => {
 
     console.log('get req received.');
@@ -27,8 +29,8 @@ io.on('connection', (socket) => {
 
 
 
-server.listen(8000, () => {
-    console.log('listening on port 8000...');
+server.listen(PORT, () => {
+    console.log(`listening on port ${PORT}  ...`);
 })
 
 
