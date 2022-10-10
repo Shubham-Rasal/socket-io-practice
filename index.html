@@ -69,7 +69,10 @@
         <input id="input" autocomplete="off" /><button>Send</button>
     </form>
 
-    <script src="/socket.io/socket.io.js"></script>
+    <script type="module">
+        import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";     
+       
+      </script>
     <script>
         const socket = io();
         const input = document.getElementById('input')
